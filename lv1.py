@@ -36,10 +36,9 @@ font = pygame.font.Font(None, 36)
 
 # Tải âm thanh
 pygame.mixer.music.load("background_music.mp3")
-jump_sound = pygame.mixer.Sound("jump.wav")
-hit_sound = pygame.mixer.Sound("hit.wav")
-damage_sound = pygame.mixer.Sound("damage_sound.wav")
-correct_sound = pygame.mixer.Sound("correct_answer.wav")
+hit_sound = pygame.mixer.Sound("hit.mp3")
+damage_sound = pygame.mixer.Sound("damage.mp3")
+correct_sound = pygame.mixer.Sound("correct.mp3")
 
 # Chạy âm thanh nền
 pygame.mixer.music.play(loops=-1)
@@ -94,12 +93,9 @@ block_image = pygame.transform.scale(block_image, (100, 20))  # Đặt kích th�
 screen.blit(block_image, (block_x, block_y))
 
 # Tải hình nền và tài nguyên
-backgrounds = [
-    pygame.image.load("background1.jpg"),
-    pygame.image.load("background2.jpg"),
-    pygame.image.load("background3.jpg"),
-    pygame.image.load("background3.jpg"),
-]
+background = pygame.image.load("background.jpg")
+background_width, background_height = background.get_size()
+
 character = pygame.image.load("character.png")
 character = pygame.transform.scale(character, (50, 50))
 
